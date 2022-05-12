@@ -1,0 +1,92 @@
+.navbar {
+  border-radius: 0px;
+  background: #F1FAEE;
+  box-shadow: 10px 10px 81px #ddf9ff, -10px -10px 81px #d1f7ff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+}
+.logo i {
+  font-size: 2.4rem;
+  cursor: pointer;
+  vertical-align: middle;
+  display: inline-block;
+  transition: all .2s ease-in;
+  
+}
+.logo i:hover {
+ transform: scale(1.1);
+  
+}
+.container h2 {
+  cursor: pointer;
+}
+.shop .basket,
+.shop i {
+  cursor: pointer;
+  color:#118AB2;
+  font-weight: bold;
+}
+
+.shop .basket {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-20px);
+  display: inline-block;
+  transition: all 0.2s;
+  pointer-events: none;
+}
+.shop i {
+  font-size: 1.7rem;
+  vertical-align: middle;
+  margin-right: 5px;
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+}
+.shop i:hover + .basket {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+.shop i:hover {
+  transform: translateX(-5px);
+}
+
+.navbar .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.menu li {
+  margin: 0 1rem;
+  cursor: pointer;
+  color: #03071E;
+}
+
+.shop .counter{
+    position: absolute;
+    width:17px;
+    height: 17px;
+    background-color: #2A9D8F;
+    color:rgb(92, 9, 9);
+    right:-10px;
+    top: -10px;
+    color:white;
+    text-align: center;
+    border-radius: 50%;
+    font-size: .8rem;
+    line-height: 17px;
+}
