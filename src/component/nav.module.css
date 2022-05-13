@@ -1,7 +1,7 @@
 .navbar {
-  border-radius: 0px;
-  background: #F1FAEE;
-  box-shadow: 10px 10px 81px #ddf9ff, -10px -10px 81px #d1f7ff;
+  
+  background: #fafff9;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .container {
@@ -18,12 +18,10 @@
   cursor: pointer;
   vertical-align: middle;
   display: inline-block;
-  transition: all .2s ease-in;
-  
+  transition: all 0.2s ease-in;
 }
 .logo i:hover {
- transform: scale(1.1);
-  
+  transform: scale(1.1);
 }
 .container h2 {
   cursor: pointer;
@@ -31,8 +29,8 @@
 .shop .basket,
 .shop i {
   cursor: pointer;
-  color:#118AB2;
-  font-weight: bold;
+  color: #118ab2;
+  font-weight: 500;
 }
 
 .shop .basket {
@@ -68,25 +66,40 @@
   list-style: none;
   padding: 1rem;
   font-size: 1.1rem;
-  font-weight: bold;
 }
 .menu li {
   margin: 0 1rem;
   cursor: pointer;
-  color: #03071E;
+  color: #03071e;
+  background-image: linear-gradient(to right, #1484ad, #0d7399 50%, #000 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  font-weight: 570;
+
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s ease-in-out;
 }
 
-.shop .counter{
-    position: absolute;
-    width:17px;
-    height: 17px;
-    background-color: #2A9D8F;
-    color:rgb(92, 9, 9);
-    right:-10px;
-    top: -10px;
-    color:white;
-    text-align: center;
-    border-radius: 50%;
-    font-size: .8rem;
-    line-height: 17px;
+.menu li:hover {
+  transform: scale(1.08);
+  background-position: 100%;
+}
+
+.shop .counter {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-color: #2a9d8f;
+  color: rgb(92, 9, 9);
+  right: -10px;
+  top: -10px;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  line-height: 17px;
 }

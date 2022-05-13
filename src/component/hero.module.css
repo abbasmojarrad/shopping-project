@@ -1,6 +1,5 @@
 .hero {
   width: 100%;
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,64 +11,49 @@
 }
 
 .hero .right {
-  font-size: 1.6rem;
   height: 100%;
-  /* border: 1px solid red; */
   flex: 1 1 450px;
   margin-left: 5rem;
   padding: 0 0 0 2rem;
+}
+.hero .right h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #18181a;
 }
 .hero .right .spanshop {
   font-size: 4rem;
   font-weight: bolder;
   color: rgb(0, 172, 115);
 }
-.hero .right .buybtn {
-  margin-top: 2rem;
-  width: 120px;
-  font-size: 1rem;
-  padding: 0.8rem 1.2rem;
-  font-weight: bold;
-  border-radius: 1rem;
-  cursor: pointer;
-  background-color: rgb(0, 125, 179);
-  color: white;
-  border: none;
- 
-}
 
 .hero .left {
   flex: 1 0 500px;
+  position: relative;
 }
+.hero .left .bubble {
+  position: absolute;
+  width: 100%;
+  top: -10px;
+  left: 5px;
+  animation: MoveUpDown 1.8s  infinite   ;
+}
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(15px);
+    transform:scaleY(0.8)
+  }
+  50% {
+    transform: translateY(-20px);
+    transform:scaleY(1.1)
 
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
-
-
-
-
-
-
-
-/* CSS */
+  }
+}
 .signupbtn {
   position: relative;
   overflow: hidden;
-  border: 1px solid #0149cf;
-  color: #18181a;
+  border: 2px solid #118ab2;
+  color: #118ab2;
   display: inline-block;
   line-height: 15px;
   text-decoration: none;
@@ -79,11 +63,11 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   margin-left: 1rem;
-  border-radius:1rem;
-  width: 180px;
+  border-radius: 1rem;
+  width: 170px;
   font-size: 1rem;
   padding: 0.8rem 1.2rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .signupbtn span:first-child {
@@ -125,9 +109,32 @@
   transform-origin: bottom center;
   transform: skewY(9.3deg) scaleY(2);
 }
+.signupbtn:hover {
+  border: 2px solid #000000;
+}
 
 .signupbtn:hover span:last-child {
   transform: translateX(-50%) translateY(-100%);
   opacity: 1;
   transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

@@ -1,17 +1,12 @@
 import React from "react";
 import styles from "./btn.module.css";
 
-
-
 function Button() {
   return (
     <>
       <button className={styles.button}>
         <span className={styles.button__text}>
-          <span>b</span>
-          <span>u</span>
-          <span>y </span>
-        
+          Buy
         </span>
 
         <svg
@@ -87,7 +82,8 @@ function Button() {
               fill="#323c44"
             />
           </g>
-        </svg>
+        </svg>  
+
       </button>
     </>
   );
