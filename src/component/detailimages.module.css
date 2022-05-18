@@ -1,0 +1,73 @@
+.detailimages {
+  margin: 6rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  height: 500px;
+}
+
+.boxcontainer {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.boxcontainer:nth-child(1) {
+  grid-area: 1 / 3 / 5 / 4;
+}
+.boxcontainer:nth-child(2) {
+  grid-area: 1 / 1 / 3 / 3;
+}
+.boxcontainer:nth-child(3) {
+  grid-area: 3 / 1 / 5 / 3;
+}
+.box1 {
+  background-image: url("../assets/box1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  transition: 500ms;
+  cursor: pointer;
+  position: relative;
+}
+.detailimages .box1::after,
+.detailimages .box2::after,
+.detailimages .box3::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 500ms;
+
+  background-color: rgba(0, 0, 0, 0.33);
+}
+.detailimages .box1:hover,
+.detailimages .box2:hover,
+.detailimages .box3:hover {
+  transform: scale(1.1);
+}
+.detailimages .box1:hover::after,
+.detailimages .box2:hover::after,
+.detailimages .box3:hover::after {
+  background-color: rgba(0, 0, 0, 0.11);
+}
+.box2 {
+  background-image: url("../assets/box2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  transition: 500ms;
+  cursor: pointer;
+  position: relative;
+}
+.box3 {
+  background-image: url("../assets/box3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  transition: 500ms;
+  position: relative;
+  cursor: pointer;
+}

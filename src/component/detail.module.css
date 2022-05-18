@@ -1,0 +1,38 @@
+.detailscard {
+  text-align: center;
+}
+.detailsheading {
+  font-size: 2rem;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem;
+  gap: 1rem;  flex-wrap: wrap;
+}
+.card {
+  padding: 1rem;
+  flex: 1 1 180px;
+}
+.card h2 {
+  font-size: 1.5rem;
+  width: 120px;
+  line-height: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: rgb(222, 255, 213);
+  margin: 0 auto 1rem;
+}
+.card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.card p {
+  font-size: 1rem;
+}

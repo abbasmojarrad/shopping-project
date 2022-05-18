@@ -1,5 +1,7 @@
 .navbar {
-  
+  position: sticky;
+  top: 0;
+  z-index: 999;
   background: #fafff9;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
@@ -67,7 +69,7 @@
   padding: 1rem;
   font-size: 1.1rem;
 }
-.menu li {
+.menu a {
   margin: 0 1rem;
   cursor: pointer;
   color: #03071e;
@@ -77,14 +79,20 @@
   display: inline-block;
   padding: 5px 0;
   font-weight: 570;
-
+text-decoration: none;
   position: relative;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.4s ease-in-out;
 }
 
-.menu li:hover {
+.shop  a{
+  color: #118ab2;
+text-decoration: none;
+
+}
+
+.menu a:hover {
   transform: scale(1.08);
   background-position: 100%;
 }

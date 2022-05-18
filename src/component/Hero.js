@@ -3,6 +3,8 @@ import styles from "./hero.module.css";
 import shopImg from "../assets/img/shop.png";
 import bubble from "../assets/img/bubble.png";
 import Button from "./Button";
+import { Link } from "react-router-dom";
+import Scrolldown from './Scroll';
 function Hero() {
   return (
     <div className={styles.hero}>
@@ -17,9 +19,14 @@ function Hero() {
         </h2>
         <Button />
         <button className={styles.signupbtn}>
-          <span className={styles.text}>Join Us</span>
-          <span>Sign Up</span>
+          <Link to="/signup">
+            <span className={styles.text}>Join Us</span>
+            <span>Sign Up</span>
+          </Link>
         </button>
+      </div>
+      <div className={styles.scrolldown} >
+      <Scrolldown/>
       </div>
     </div>
   );

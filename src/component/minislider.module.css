@@ -1,0 +1,73 @@
+.minislider {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.hedingminislide {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.card {
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 300ms ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.card:hover {
+  transform: scale(0.96);
+}
+
+.cardtop {
+  background-image: url("../assets/box3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 200px;
+  background-size: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.cardbottom {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.viewbtn {
+  display: inline-block;
+  margin-top: 3rem;
+}
+
+/* CSS */
+.viewbtn {
+  margin-top: 3rem;
+  padding: 15px 30px;
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+  transition: 0.4s;
+  color: white;
+  border-radius: 14px;
+  border: 0px;
+  font-weight: 600;
+  box-shadow: 0px 0px 14px -7px #060505;
+  background-color: #060505;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.viewbtn:hover {
+  color: #fff;
+  background-color: #1a1818ea;
+  text-decoration: none;
+}
+
+.viewbtn:active {
+  transform: scale(0.95);
+  background-color: #060505;
+
+
+}
