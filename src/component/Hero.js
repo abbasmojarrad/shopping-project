@@ -4,8 +4,9 @@ import shopImg from "../assets/img/shop.png";
 import bubble from "../assets/img/bubble.png";
 import Button from "./Button";
 import { Link } from "react-router-dom";
-import Scrolldown from './Scroll';
+import Scrolldown from "./Scroll";
 function Hero() {
+ 
   return (
     <div className={styles.hero}>
       <div className={styles.left}>
@@ -25,8 +26,8 @@ function Hero() {
           </Link>
         </button>
       </div>
-      <div className={styles.scrolldown} >
-      <Scrolldown/>
+      <div className={styles.scrolldown}>
+        <Scrolldown  />
       </div>
     </div>
   );

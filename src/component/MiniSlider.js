@@ -4,7 +4,10 @@ import styles from "./minislider.module.css";
 import img from "../assets/box3.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { BsFillArrowLeftCircleFill , BsFillArrowRightCircleFill } from "react-icons/bs";
+import {
+  BsFillArrowLeftCircleFill,
+  BsFillArrowRightCircleFill,
+} from "react-icons/bs";
 const SampleNextArrow = ({ className, onClick }) => (
   <BsFillArrowRightCircleFill
     color="#000"
@@ -13,11 +16,14 @@ const SampleNextArrow = ({ className, onClick }) => (
   />
 );
 const SamplePrevArrow = ({ className, onClick }) => (
-  <BsFillArrowLeftCircleFill
+  <div >
+      <BsFillArrowLeftCircleFill
     color="#000"
     className={className}
     onClick={onClick}
   />
+  </div>
+
 );
 
 function MiniSlider() {
@@ -43,7 +49,7 @@ function MiniSlider() {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 992,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
@@ -52,18 +58,22 @@ function MiniSlider() {
         },
       },
       {
-        breakpoint: 750,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
           initialSlide: 2,
+          nextArrow: null,
+          prevArrow: null,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 520,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          nextArrow: null,
+          prevArrow: null,
         },
       },
     ],
@@ -86,8 +96,7 @@ function MiniSlider() {
           );
         })}
       </Slider>
-    <button className={styles.viewbtn} >View All</button>
-
+      <button className={styles.viewbtn}>View All</button>
     </div>
   );
 }

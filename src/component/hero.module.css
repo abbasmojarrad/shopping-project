@@ -131,22 +131,115 @@
   left: 50%;
   transform:translate(0,50%);
 }
-/* Extra small devices (phones, 600px and down) */
+
+
+@media only screen and (max-width: 992px) {
+  .heroimage {
+    width: 70%;
+  }
+  .scrolldown{
+    display:none;
+  }
+  .hero .right {
+    padding:0;
+    margin: 0rem;
+    height:auto;
+   }
+   .hero .right .spanshop {
+    font-size: 3rem;
+  }
+  .signupbtn {
+
+    width: 130px;
+    margin-top: 1rem;
+    margin-right: 1rem;
+  
+  }
+  .hero {
+    min-height: auto;
+    text-align: center;
+    margin: 6rem auto 4rem;
+  }
+  .hero .left .bubble {
+    top: -80px;
+    left: 55px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+ 
+  .hero {
+    display: block;
+    min-height: auto;
+    text-align: center;
+    margin: 4rem auto 4rem;
+  }
+  .scrolldown{
+    display:none;
+  }
+ 
+  .hero .right {
+    padding:0;
+    margin: 0rem;
+    height:auto;
+   }
+   .signupbtn {
+
+    width: 180px;
+    margin-top: 0;
+    margin-right: 0;
+  
+  }
+   .hero .right .spanshop {
+    font-size: 3rem;
+  }
+  .hero .left .bubble {
+    top: -40px;
+    left: 100px;
+    width: 80%;
+
+  }
+}
+
+
 @media only screen and (max-width: 600px) {
+  .hero {
+    display: block;
+    margin: 3rem auto 7rem;
+    min-height: auto;
+
+    text-align: center;
+  }
+  .hero .right {
+   padding:0;
+   margin: 0rem;
+   height:auto;
+  }
+  .heroimage {
+    width: 70%;
+  }
+  .hero .right h2 {
+    font-size: 2rem;
+  }
+  .hero .right .spanshop {
+    font-size: 3rem;
+  }
+  .scrolldown{
+    display:none;
+  }
+  .signupbtn{
+    margin-top: 1rem;
+    width:50%;
+  }
+  .hero .left .bubble {
+    top: -50px;
+    left: 40px;
+    width: 100%;
+
+  }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-}
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-}
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-}

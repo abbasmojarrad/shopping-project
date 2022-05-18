@@ -111,3 +111,14 @@ text-decoration: none;
   font-size: 0.8rem;
   line-height: 17px;
 }
+
+
+@media only screen and (max-width: 600px) {
+  .navbar .menu {
+    display: none;
+   
+  }
+}
+
+
+

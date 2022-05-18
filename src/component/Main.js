@@ -9,9 +9,9 @@ function Main() {
     <main className={styles.main}>
       <div className={styles.container}>
         <Hero />
-        <DetailCards />
-        <DetailImages />
         <MiniSlider />
+        <DetailImages />
+        <DetailCards />
       </div>
     </main>
   );
