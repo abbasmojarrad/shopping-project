@@ -21,7 +21,7 @@
 }
 
 .cardtop {
-  background-image: url("../assets/box3.jpg");
+  background-image: url("../../assets/box3.jpg");
   background-repeat: no-repeat;
   background-position: center;
   height: 200px;
@@ -40,7 +40,6 @@
   margin-top: 3rem;
 }
 
-/* CSS */
 .viewbtn {
   margin-top: 3rem;
   padding: 15px 30px;

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./detailimages.module.css";
+import styles from "./css/detailimages.module.css";
 function DetailImages() {
   return (
     <section className={styles.detailimages}>

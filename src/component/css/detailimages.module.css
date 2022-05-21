@@ -21,7 +21,7 @@
   grid-area: 3 / 1 / 5 / 3;
 }
 .box1 {
-  background-image: url("../assets/box1.jpg");
+  background-image: url("../../assets/box1.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -52,7 +52,7 @@
   background-color: rgba(0, 0, 0, 0.11);
 }
 .box2 {
-  background-image: url("../assets/box2.jpg");
+  background-image: url("../../assets/box2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -62,7 +62,7 @@
   position: relative;
 }
 .box3 {
-  background-image: url("../assets/box3.jpg");
+  background-image: url("../../assets/box3.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

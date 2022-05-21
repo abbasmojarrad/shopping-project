@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { GiSproutDisc } from "react-icons/gi";
 import { Link } from "react-router-dom";
-
-import styles from "./nav.module.css";
+import { GrMenu } from "react-icons/gr";
+import styles from "./css/nav.module.css";
+import MobileNav from "./MobileNav";
 function Nav() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
@@ -23,17 +26,22 @@ function Nav() {
           </ul>
         </div>
         <div className={styles.shop}>
-        <Link to="/cart">
-             <i>
-            <HiOutlineShoppingCart />
-            {/* <span className={styles.counter}>0</span> */}
-          </i>
-            
-          <span className={styles.basket}>Cart </span>
-        </Link>
-       
+          <Link to="/cart">
+            <i className={styles.carticon}>
+              <HiOutlineShoppingCart />
+              {/* <span className={styles.counter}>0</span> */}
+            </i>
+
+            <span className={styles.basket}>Cart </span>
+          </Link>
+          <div className={styles.mobilemenu}>
+            <i className={styles.menuicon}>
+              <GrMenu onClick={() => setIsOpen(true)} />
+            </i>
+          </div>
         </div>
       </div>
+      {isOpen && <MobileNav  setIsOpen={setIsOpen} />}
     </nav>
   );
 }

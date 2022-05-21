@@ -3,7 +3,8 @@
   top: 0;
   z-index: 999;
   background: #fafff9;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .container {
@@ -29,12 +30,19 @@
   cursor: pointer;
 }
 .shop .basket,
-.shop i {
+.shop .carticon {
   cursor: pointer;
   color: #118ab2;
   font-weight: 500;
 }
+.shop {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 0 1.3rem;
 
+}
 .shop .basket {
   opacity: 0;
   visibility: hidden;
@@ -42,8 +50,9 @@
   display: inline-block;
   transition: all 0.2s;
   pointer-events: none;
+ 
 }
-.shop i {
+.shop .carticon {
   font-size: 1.7rem;
   vertical-align: middle;
   margin-right: 5px;
@@ -51,7 +60,7 @@
   transition: all 0.2s ease-in;
   position: relative;
 }
-.shop i:hover + .basket {
+.shop .carticon:hover + .basket {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
@@ -79,24 +88,27 @@
   display: inline-block;
   padding: 5px 0;
   font-weight: 570;
-text-decoration: none;
+  text-decoration: none;
   position: relative;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.4s ease-in-out;
 }
 
-.shop  a{
+.shop a {
   color: #118ab2;
-text-decoration: none;
-
+  text-decoration: none;
 }
 
 .menu a:hover {
   transform: scale(1.08);
   background-position: 100%;
 }
-
+.menuicon{
+  font-size: 1.5rem;
+  margin-right:5px;
+  cursor: pointer;
+}
 .shop .counter {
   position: absolute;
   width: 17px;
@@ -112,13 +124,17 @@ text-decoration: none;
   line-height: 17px;
 }
 
-
 @media only screen and (max-width: 600px) {
   .navbar .menu {
     display: none;
-   
+  }
+  .mobilemenu {
+    display: block;
   }
 }
 
-
-
+@media only screen and (min-width: 600px) {
+  .mobilemenu {
+    display: none;
+  }
+}

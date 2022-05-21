@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './scroll.module.css';
+import styles from './css/scroll.module.css';
 function Scroll() {
   const handleScroll = () => {
     window.scrollTo({

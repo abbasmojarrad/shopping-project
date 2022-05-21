@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./detail.module.css";
+import styles from "./css/detail.module.css";
 import Card from "./DetailCard";
 function Detail() {
   return (

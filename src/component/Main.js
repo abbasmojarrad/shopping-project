@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./main.module.css";
+import styles from "./css/main.module.css";
 import Hero from "./Hero";
 import DetailCards from "./Detail";
 import DetailImages from "./DetailImages";

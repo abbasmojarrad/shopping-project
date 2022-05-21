@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./hero.module.css";
+import styles from "./css/hero.module.css";
 import shopImg from "../assets/img/shop.png";
 import bubble from "../assets/img/bubble.png";
 import Button from "./Button";

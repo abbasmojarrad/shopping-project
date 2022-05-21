@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import styles from "./minislider.module.css";
+import styles from "./css/minislider.module.css";
 import img from "../assets/box3.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
