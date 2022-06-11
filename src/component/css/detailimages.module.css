@@ -1,7 +1,7 @@
 .detailimages {
-  margin: 6rem 0;
+  margin: 6rem auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(80%, 1fr));
   grid-column-gap: 8px;
   grid-row-gap: 8px;
   height: 500px;

@@ -1,11 +1,11 @@
 import React from "react";
-import styles from './css/scroll.module.css';
-function Scroll() {
+import styles from "./css/scroll.module.css";
+const Scroll = () => {
   const handleScroll = () => {
     window.scrollTo({
       top: 800,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
   return (
@@ -16,6 +16,6 @@ function Scroll() {
       </div>
     </div>
   );
-}
+};
 
 export default Scroll;

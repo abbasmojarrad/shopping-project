@@ -138,3 +138,22 @@
     display: none;
   }
 }
+
+
+@media only screen and (max-width:430px) {
+  .container {
+  
+    padding: 1rem 10px;
+  
+  }
+  .shop .carticon + .basket {
+      display:none
+  }
+  .shop i:hover {
+    transform: none;
+  }
+  .menuicon{
+    margin-right:0px;
+   
+  }
+}

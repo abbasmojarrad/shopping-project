@@ -1,6 +1,7 @@
 import React from "react";
+//css
 import styles from "./css/detailimages.module.css";
-function DetailImages() {
+const DetailImages = () =>{
   return (
     <section className={styles.detailimages}>
       <div className={styles.boxcontainer}>

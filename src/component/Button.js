@@ -1,8 +1,9 @@
 import React from "react";
-import styles from "./css/btn.module.css";
 import { Link } from "react-router-dom";
+//css 
+import styles from "./css/btn.module.css";
 
-function Button() {
+const Button = ()=> {
   return (
     <>
       <button className={styles.button}>

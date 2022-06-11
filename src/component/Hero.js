@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+//css
 import styles from "./css/hero.module.css";
+//component
 import shopImg from "../assets/img/shop.png";
 import bubble from "../assets/img/bubble.png";
 import Button from "./Button";
-import { Link } from "react-router-dom";
 import Scrolldown from "./Scroll";
-function Hero() {
- 
+const Hero = () => {
   return (
     <div className={styles.hero}>
       <div className={styles.left}>
@@ -27,10 +28,10 @@ function Hero() {
         </button>
       </div>
       <div className={styles.scrolldown}>
-        <Scrolldown  />
+        <Scrolldown />
       </div>
     </div>
   );
-}
+};
 
 export default Hero;

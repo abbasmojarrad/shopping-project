@@ -1,9 +1,12 @@
 import React from "react";
-import Slider from "react-slick";
+//css
 import styles from "./css/minislider.module.css";
-import img from "../assets/box3.jpg";
+//slider component and css
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+//image and icon
+import img from "../assets/box3.jpg";
 import {
   BsFillArrowLeftCircleFill,
   BsFillArrowRightCircleFill,
@@ -16,14 +19,13 @@ const SampleNextArrow = ({ className, onClick }) => (
   />
 );
 const SamplePrevArrow = ({ className, onClick }) => (
-  <div >
-      <BsFillArrowLeftCircleFill
-    color="#000"
-    className={className}
-    onClick={onClick}
-  />
+  <div>
+    <BsFillArrowLeftCircleFill
+      color="#000"
+      className={className}
+      onClick={onClick}
+    />
   </div>
-
 );
 
 function MiniSlider() {

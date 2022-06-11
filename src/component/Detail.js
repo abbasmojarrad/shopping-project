@@ -1,7 +1,9 @@
 import React from "react";
+//css
 import styles from "./css/detail.module.css";
+//component
 import Card from "./DetailCard";
-function Detail() {
+const Detail = () => {
   return (
     <section className={styles.detailscard}>
       <h2 className={styles.detailsheading}>How Purse Works</h2>

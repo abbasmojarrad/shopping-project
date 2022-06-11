@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+//css
+import styles from "./css/nav.module.css";
+//icon
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { GiSproutDisc } from "react-icons/gi";
-import { Link } from "react-router-dom";
 import { GrMenu } from "react-icons/gr";
-import styles from "./css/nav.module.css";
+//component
 import MobileNav from "./MobileNav";
-function Nav() {
+const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -41,9 +44,9 @@ function Nav() {
           </div>
         </div>
       </div>
-      {isOpen && <MobileNav  setIsOpen={setIsOpen} />}
+      {isOpen && <MobileNav setIsOpen={setIsOpen} />}
     </nav>
   );
-}
+};
 
 export default Nav;

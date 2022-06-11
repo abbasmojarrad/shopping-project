@@ -1,6 +1,7 @@
 import React from "react";
+//component
 import Main from "../component/Main";
-function Home() {
+const Home = () =>{
   return (
     <>
       <Main />

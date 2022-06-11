@@ -1,8 +1,9 @@
 import React from "react";
-import styles from "./css/mobilenav.module.css";
 import { Link } from "react-router-dom";
+//css
+import styles from "./css/mobilenav.module.css";
 
-function MobileNav({ setIsOpen, isOpen }) {
+const MobileNav = ({ setIsOpen }) =>{
   return (
     <div className={styles.mobilemenu__container}>
       <div onClick={() => setIsOpen(false)}>close menu</div>
