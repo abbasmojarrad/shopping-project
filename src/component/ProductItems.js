@@ -26,16 +26,18 @@ const ProductItems = ({ data }) => {
               add to cart
             </button>
           )}
+          <span>{ProductNumber(state.cartList, data.id)}</span>
           {ProductNumber(state.cartList, data.id) === 1 && (
             <button onClick={() => dispatch({ type: "REMOVE", payload: data })}>
               remove
             </button>
           )}
+          
           {ProductNumber(state.cartList, data.id) > 1 && (
             <button
               onClick={() => dispatch({ type: "DECREASE", payload: data })}
             >
-              -{" "}
+              -
             </button>
           )}
         </div>

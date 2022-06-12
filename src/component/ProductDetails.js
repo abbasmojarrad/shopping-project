@@ -1,5 +1,5 @@
-import React, { useContext, useEffect  } from "react";
-import { Link ,useHistory } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { Link, useHistory } from "react-router-dom";
 //context
 import { ProductContext } from "../context/ProductContextProvider";
 import { CartContext } from "../context/CartContextProvider";
@@ -14,7 +14,7 @@ const ProductDetails = (props) => {
   let product = products[id - 1];
   useEffect(() => {
     if (products.length) {
-      !products.find((item) =>item.id === id) && history.push("/product");;
+      !products.find((item) => item.id === id) && history.push("/product");
     }
   });
   return (
@@ -38,6 +38,7 @@ const ProductDetails = (props) => {
               add to cart
             </button>
           )}
+          <span>{ProductNumber(state.cartList, product?.id)}</span>
           {ProductNumber(state.cartList, product?.id) === 1 && (
             <button
               onClick={() => dispatch({ type: "REMOVE", payload: product })}

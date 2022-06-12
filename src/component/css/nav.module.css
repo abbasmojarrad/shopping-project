@@ -41,7 +41,6 @@
   align-items: center;
   justify-content: center;
   gap: 0 1.3rem;
-
 }
 .shop .basket {
   opacity: 0;
@@ -50,7 +49,6 @@
   display: inline-block;
   transition: all 0.2s;
   pointer-events: none;
- 
 }
 .shop .carticon {
   font-size: 1.7rem;
@@ -104,24 +102,25 @@
   transform: scale(1.08);
   background-position: 100%;
 }
-.menuicon{
+.menuicon {
   font-size: 1.5rem;
-  margin-right:5px;
+  margin-right: 5px;
   cursor: pointer;
 }
 .shop .counter {
   position: absolute;
-  width: 17px;
-  height: 17px;
+  width: 20px;
+  height: 20px;
   background-color: #2a9d8f;
   color: rgb(92, 9, 9);
   right: -10px;
   top: -10px;
   color: white;
-  text-align: center;
   border-radius: 50%;
-  font-size: 0.8rem;
-  line-height: 17px;
+  font-size: 0.7rem;
+  text-indent: -3px;
+  line-height: 20px;
+  text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
@@ -139,21 +138,17 @@
   }
 }
 
-
-@media only screen and (max-width:430px) {
+@media only screen and (max-width: 430px) {
   .container {
-  
     padding: 1rem 10px;
-  
   }
   .shop .carticon + .basket {
-      display:none
+    display: none;
   }
   .shop i:hover {
     transform: none;
   }
-  .menuicon{
-    margin-right:0px;
-   
+  .menuicon {
+    margin-right: 0px;
   }
 }

@@ -38,7 +38,9 @@ const Nav = () => {
               <HiOutlineShoppingCart />
 
               {state.itemCount > 0 && (
-                <span className={styles.counter}>{state.itemCount}</span>
+                <div className={styles.counter}>
+                  <span>{state.itemCount}</span>
+                </div>
               )}
             </i>
 
