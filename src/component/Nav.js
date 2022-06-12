@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 //css
 import styles from "./css/nav.module.css";
@@ -8,9 +8,13 @@ import { GiSproutDisc } from "react-icons/gi";
 import { GrMenu } from "react-icons/gr";
 //component
 import MobileNav from "./MobileNav";
+
+//context
+import { CartContext } from "../context/CartContextProvider";
+
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [state] = useContext(CartContext);
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
@@ -32,7 +36,10 @@ const Nav = () => {
           <Link to="/cart">
             <i className={styles.carticon}>
               <HiOutlineShoppingCart />
-              {/* <span className={styles.counter}>0</span> */}
+
+              {state.itemCount > 0 && (
+                <span className={styles.counter}>{state.itemCount}</span>
+              )}
             </i>
 
             <span className={styles.basket}>Cart </span>

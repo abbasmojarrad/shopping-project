@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
-import {getData,fetchProductUrl} from "../services/api";
+import {getData} from "../services/api";
 
 export const ProductContext = createContext();
 
@@ -10,7 +10,7 @@ const ProductContextProvider = ({ children }) => {
     (async () => {
       setProduct(await getData());
     })();
-  }, [fetchProductUrl]);
+  }, []);
   
 
   return (

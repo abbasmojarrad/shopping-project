@@ -12,21 +12,25 @@ import Navbar from "./component/Nav";
 import ProductDetails from "./component/ProductDetails";
 //context
 import ProductContextProvider from "./context/ProductContextProvider";
+import CartContextProvider from "./context/CartContextProvider";
 const App = () => {
   return (
     <ProductContextProvider>
-      <Navbar />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/product/:id" component={ProductDetails} />
-        <Route path="/product" component={Product} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/cart" component={Cart} />
-        <Route path="/signup" component={Signup} />
-        <Route path="/login" component={Login} />
-        <Redirect to="/" component={Home} />
-      </Switch>
-      <Footer />
+      <CartContextProvider>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/product/:id" component={ProductDetails} />
+          <Route path="/product" component={Product} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/cart" component={Cart} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/login" component={Login} />
+          <Route path="*" component={Home} />
+          <Redirect to="/" component={Home} />
+        </Switch>
+        <Footer />
+      </CartContextProvider>
     </ProductContextProvider>
   );
 };
