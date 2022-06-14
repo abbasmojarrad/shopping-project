@@ -113,13 +113,13 @@
   height: 20px;
   background-color: #2a9d8f;
   color: rgb(92, 9, 9);
-  right: -10px;
-  top: -10px;
+  right: -9px;
+  top: -2px;
   color: white;
   border-radius: 50%;
   font-size: 0.7rem;
   text-indent: -3px;
-  line-height: 20px;
+  line-height: 19px;
   text-align: center;
 }
 

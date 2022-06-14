@@ -1,30 +1,17 @@
-import React, { useContext, useState, useEffect, memo } from "react";
-import { GiLevelTwoAdvanced } from "react-icons/gi";
+import React, { useContext } from "react";
+//css
+import styles from "../component/css/product.module.css";
 //component
 import ProductItems from "../component/ProductItems";
+import loader from '../assets/loader.gif'
 //context
 import { ProductContext } from "../context/ProductContextProvider";
 const Product = () => {
   const products = useContext(ProductContext);
-  const [loading, isLoading] = useState();
-
-  useEffect(() => {
-      isLoading(products.length === 0 ? true : false);
-  }, [products]);
   return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: "20px",
-        margin: "100px auto 0",
-        minHeight: "100vh",
-      }}
-    >
-      {loading ? (
-        <div>loading</div>
+    <div className={styles.container}>
+      {!products.length ? (
+        <div><img style={{width:"120%"}} src={loader} alt="" /></div>
       ) : (
         products.map((product) => {
           return <ProductItems key={product.id} data={product} />;
@@ -34,4 +21,4 @@ const Product = () => {
   );
 };
 
-export default memo(Product);
+export default Product;

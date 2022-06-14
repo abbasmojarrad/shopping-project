@@ -1,0 +1,109 @@
+.cart {
+  margin: 0 auto;
+  display: flex;
+  height: 400px;
+  width: 280px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 500ms;
+  justify-items: flex-start;
+  padding: 1rem 1.3rem;
+  border-radius: 0.7rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.cart:hover {
+  transform: scale(1.05);
+  box-shadow: none;
+}
+.product__image__link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+.product__image {
+  width: 61%;
+  cursor: pointer;
+  height: 89%;
+}
+.cart .head {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin: 2.5rem 1rem 0;
+}
+.head h3 {
+  font-size: 1.4rem;
+  margin: 0;
+  margin-block: 0;
+}
+.head span {
+  font-size: 1.1rem;
+  align-self: center;
+}
+
+.cart .down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1.5rem 0 1rem;
+}
+.detail {
+  text-decoration: none;
+  color: #118ab2;
+  font-size: 1.1rem;
+}
+
+.add__button,
+.increase__button,
+.decrease__button,
+.remove {
+  background-color: #118ab2;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 21px;
+  transition: color 0.13s ease-in-out, background 0.13s ease-in-out,
+    opacity 0.13s ease-in-out, box-shadow 0.13s ease-in-out;
+  font-weight: bold;
+}
+.add__button {
+  margin-right: -13px;
+  font-size: 0.9rem;
+}
+.add__button:active {
+  background-color: #006ae8;
+}
+
+.add__button:hover {
+  background-color: #096685;
+}
+.increase__button {
+  background-color: #118ab2;
+  padding: 0.4rem 0.7rem;
+  font-size: 1rem;
+}
+.decrease__button,
+.remove {
+  background-color: #b1000c;
+  padding: 0.4rem 0.7rem;
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 10px;
+}
+
+.product__number {
+  font-weight: bold;
+}
