@@ -14,24 +14,28 @@ const Product = () => {
     product.title.toLowerCase().startsWith(search.toLowerCase())
   );
   return (
-    <div>
-      <input
-        type="text"
-        name="product"
-        value={search}
-        onChange={changeHandler}
-      />
-      <div className={styles.container}>
-        {!products.length ? (
-          <div>
-            <img style={{ width: "120%" }} src={loader} alt="" />
+    <div className={styles.main__container}>
+      {!products.length ? (
+        <div className={styles.loading}>
+          <img style={{ width: "120%" }} src={loader} alt="" />
+        </div>
+      ) : (
+        <>
+          <input
+            className={styles.search__input}
+            type="text"
+            name="product"
+            placeholder="search product"
+            value={search}
+            onChange={changeHandler}
+          />
+          <div className={styles.container}>
+            {filterProduct.map((product) => {
+              return <ProductItems key={product.id} data={product} />;
+            })}
           </div>
-        ) : (
-          filterProduct.map((product) => {
-            return <ProductItems key={product.id} data={product} />;
-          })
-        )}
-      </div>
+        </>
+      )}
     </div>
   );
 };

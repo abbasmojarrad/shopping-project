@@ -4,11 +4,15 @@
   align-items: center;
   gap: 0 30px;
   flex-wrap: wrap;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 3rem 2rem;
+  border-radius: 15px;
 }
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 79.1vh;
+  min-height: 79.5vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,18 +23,21 @@
 .decrease__button,
 .remove {
   background-color: #118ab2;
-  border-radius: 8px;
+  border-radius: 30px;
   border-style: none;
   box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
   color: #fff;
   cursor: pointer;
-  padding: 10px 21px;
+  padding: 10px 25px;
   transition: color 0.13s ease-in-out, background 0.13s ease-in-out,
     opacity 0.13s ease-in-out, box-shadow 0.13s ease-in-out;
   font-weight: bold;
 }
+.buttons {
+  margin-top: 2.5rem;
+  margin-left: -0.5rem;
+}
 .add__button {
-  margin-right: -13px;
   font-size: 0.9rem;
 }
 .add__button:active {
@@ -57,12 +64,12 @@
 }
 
 .details {
-  width:70%;
+  width: 70%;
   padding: 1rem;
   margin-left: 1rem;
 }
 .image__container {
-  width:25%;
+  width: 25%;
 }
 .image__container img {
   width: 100%;
@@ -85,11 +92,19 @@
   margin: 0.4rem 0 0;
   font-weight: 500;
 }
-
+.back{
+  top: 14%;
+  left: 3%;
+  position: fixed;
+  z-index: 99;
+  text-decoration: none;
+  font-weight: bold;
+  color:rgb(6, 6, 6);
+}
 @media only screen and (max-width: 919px) {
   .details {
-    width:100%;
-    padding: 1rem ;
+    width: 100%;
+    padding: 1rem;
     margin-left: 1rem;
     display: flex;
     justify-content: center;

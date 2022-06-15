@@ -24,7 +24,7 @@ const ProductDetails = (props) => {
   });
   return (
     <>
-      <Link to="/product">back to shop</Link>
+      <Link className={styles.back} to="/product">back to shop</Link>
       <div className={styles.container}>
         {!products.length ? (
           <div>
@@ -41,7 +41,7 @@ const ProductDetails = (props) => {
               <p className={styles.description}>{product?.description}</p>
               <p className={styles.price}>{product?.price}$</p>
               <div className={styles.buttons}>
-                <div>
+                <div >
                   {hasProduct(state.cartList, product?.id) ? (
                     <button
                       className={styles.increase__button}
@@ -58,7 +58,7 @@ const ProductDetails = (props) => {
                         dispatch({ type: "ADD", payload: product })
                       }
                     >
-                      add to cart
+                      Add to Cart
                     </button>
                   )}
                   <span className={styles.product__number}>

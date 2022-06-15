@@ -1,5 +1,4 @@
 .cart {
-  margin: 0 auto;
   display: flex;
   height: 400px;
   width: 280px;
@@ -64,15 +63,16 @@
 .decrease__button,
 .remove {
   background-color: #118ab2;
-  border-radius: 8px;
+  border-radius: 30px;
   border-style: none;
   box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
   color: #fff;
   cursor: pointer;
-  padding: 10px 21px;
+  padding: 10px 25px;
   transition: color 0.13s ease-in-out, background 0.13s ease-in-out,
     opacity 0.13s ease-in-out, box-shadow 0.13s ease-in-out;
   font-weight: bold;
+  
 }
 .add__button {
   margin-right: -13px;
