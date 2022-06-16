@@ -27,6 +27,7 @@ const reduceHandler = (state, action) => {
           product.number++;
           return true;
         }
+        return false;
       });
       return { ...state, ...totalCount(state.cartList) };
 
@@ -36,6 +37,8 @@ const reduceHandler = (state, action) => {
           product.number--;
           return true;
         }
+        return false;
+
       });
       return { ...state, ...totalCount(state.cartList) };
 

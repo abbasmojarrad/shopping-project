@@ -19,9 +19,9 @@ const MobileNav = ({ setIsOpen }) =>{
           </Link>
         </li>
         <li>
-          <Link onClick={() => setIsOpen(false)} to="/contact">
+          {/* <Link onClick={() => setIsOpen(false)} to="/contact">
             Contact
-          </Link>
+          </Link> */}
         </li>
       </ul>
     </div>

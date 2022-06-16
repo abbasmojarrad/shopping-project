@@ -29,7 +29,7 @@ const Nav = () => {
           <ul className={styles.menu}>
             <Link to="/">Home</Link>
             <Link to="/product">Shop</Link>
-            <Link to="/contact">Contact</Link>
+            {/* <Link to="/contact">Contact</Link> */}
           </ul>
         </div>
         <div className={styles.shop}>

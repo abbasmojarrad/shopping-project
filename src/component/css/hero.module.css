@@ -3,34 +3,35 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 800px;
-  padding: 0 0 0 1rem;
   position: relative;
+  margin: 0rem 0 6rem;
+  height: 68vh;
+  padding: 2rem;
+  max-height: 720px;
 }
 .heroimage {
-  width: 100%;
+  width: 80%;
 }
 
 .hero .right {
-  height: 100%;
-  flex: 1 1 450px;
-  margin-left: 5rem;
-  padding: 0 0 0 2rem;
+  flex: 1 1 45%;
+  padding: 1rem;
 }
 .hero .right h2 {
-  font-weight: 600;
-  font-size: 2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
   color: #18181a;
 }
 .hero .right .spanshop {
-  font-size: 4rem;
-  font-weight: bolder;
+  font-size: 3.3rem;
+  font-weight: bold;
   color: rgb(0, 172, 115);
 }
 
 .hero .left {
-  flex: 1 0 500px;
+  flex: 1 1 53%;
   position: relative;
+  padding: 1rem;
 }
 .hero .left .bubble {
   position: absolute;
@@ -38,6 +39,7 @@
   top: -10px;
   left: 5px;
   animation: MoveUpDown 1.8s infinite;
+  display: none;
 }
 @keyframes MoveUpDown {
   0%,
@@ -73,7 +75,6 @@
 .hero a {
   text-decoration: none;
   color: #118ab2;
-
 }
 
 .signupbtn span:first-child {
@@ -125,136 +126,58 @@
   transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
 }
 
-.scrolldown{
+.scrolldown {
   position: absolute;
   top: 85%;
   left: 50%;
-  transform:translate(0,50%);
+  transform: translate(0, 50%);
+  display:none;
 }
-
 
 @media only screen and (max-width: 992px) {
-  .heroimage {
-    width: 70%;
-  }
-  .scrolldown{
-    display:none;
-  }
-  .hero .right {
-    padding:0;
-    margin: 0rem;
-    height:auto;
-   }
-   .hero .right .spanshop {
+  .hero .right .spanshop {
     font-size: 3rem;
   }
-  .signupbtn {
 
-    width: 150px;
-    margin-top: 1rem;
-    margin-right: 1rem;
-  
-  }
-  .hero {
-    min-height: auto;
-    text-align: center;
-    margin: 6rem auto 4rem;
-  }
-  .hero .left .bubble {
-    top: -80px;
-    left: 55px;
-  }
 }
 
-
 @media only screen and (max-width: 768px) {
- 
   .hero {
     display: block;
-    min-height: auto;
     text-align: center;
-    margin: 4rem auto 4rem;
-  }
-  .scrolldown{
-    display:none;
+    margin: 1rem 0 5rem;
   }
   .heroimage {
     width: 50%;
   }
-  .hero .right {
-    padding:0;
-    margin: 0rem;
-    height:auto;
-   }
-   .signupbtn {
-
-    width: 180px;
-    margin-top: 0;
-    margin-right: 0;
-  
-  }
-   .hero .right .spanshop {
-    font-size: 3rem;
-  }
-  .hero .left .bubble {
-    top: -33px;
-    left: 170px;
-    width: 60%;
-
+  .signupbtn {
+    margin-top: 1rem;
   }
 }
 
-
 @media only screen and (max-width: 600px) {
-  .hero {
-    display: block;
-    margin: 3rem 0 7rem;
-  }
- 
   .heroimage {
     width: 60%;
   }
-  .hero .right h2 {
-    margin-top: 2rem;
-    font-size: 2rem;
-  }
-  .hero .right .spanshop {
-    font-size: 3rem;
-  }
-  .scrolldown{
-    display:none;
-  }
-  .signupbtn{
-    margin-top: 1rem;
-    width:40%;
-    margin-right: 10px;
-  }
-  .hero .left .bubble {
-    top: -35px;
-    left: 80px;
-    width: 80%;
-
+  .hero {
+    margin: 2rem 0 3rem;
+    padding: 2rem 1rem;
   }
 }
 
-
-
-
-@media only screen and (max-width:430px) {
-  
+@media only screen and (max-width: 430px) {
   .heroimage {
     width: 75%;
   }
- 
-  .signupbtn{
-    margin-top: 1rem;
-    width:60%;
-  } .hero  {
-  padding-left: 0;
 
+  .signupbtn {
+    margin-top: 1rem;
+    width: 60%;
+  }
+  .hero {
+    padding-left: 0;
   }
   .hero .left .bubble {
-    display:none;
-
+    display: none;
   }
 }

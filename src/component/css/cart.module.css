@@ -66,4 +66,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.buyitem a,
+.checkout a {
+  text-decoration: none;
+  margin-top: .7rem;
+  font-weight:bold;
+  color:rgb(0, 98, 211);  
+  display: block;
 }
