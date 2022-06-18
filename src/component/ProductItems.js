@@ -2,11 +2,10 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 //context
 import { CartContext } from "../context/CartContextProvider";
-//helper functions
-import { hasProduct, ProductNumber } from "../helper/functions";
 //css
 import styles from "./css/productitems.module.css";
-import { HiTrash } from "react-icons/hi";
+//component
+import ActionButtons from "./ActionButtons";
 
 const ProductItems = ({ data }) => {
   const [state, dispatch] = useContext(CartContext);
@@ -28,41 +27,12 @@ const ProductItems = ({ data }) => {
           Detail
         </Link>
         <div className={styles.buttons}>
-          {hasProduct(state.cartList, data.id) ? (
-            <button
-              className={styles.increase__button}
-              onClick={() => dispatch({ type: "INCREASE", payload: data })}
-            >
-              +
-            </button>
-          ) : (
-            <button
-              className={styles.add__button}
-              onClick={() => dispatch({ type: "ADD", payload: data })}
-            >
-              Add to Cart
-            </button>
-          )}
-          <span className={styles.product__number}>
-            {ProductNumber(state.cartList, data.id)}
-          </span>
-          {ProductNumber(state.cartList, data.id) === 1 && (
-            <button
-              className={styles.remove}
-              onClick={() => dispatch({ type: "REMOVE", payload: data })}
-            >
-              <HiTrash />
-            </button>
-          )}
-
-          {ProductNumber(state.cartList, data.id) > 1 && (
-            <button
-              className={styles.decrease__button}
-              onClick={() => dispatch({ type: "DECREASE", payload: data })}
-            >
-              -
-            </button>
-          )}
+          <ActionButtons
+            classlist={styles}
+            dispatch={dispatch}
+            product={data}
+            state={state}
+          />
         </div>
       </div>
     </div>

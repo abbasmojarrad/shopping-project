@@ -4,6 +4,8 @@ import styles from "../component/css/product.module.css";
 //component
 import ProductItems from "../component/ProductItems";
 import loader from "../assets/loader.gif";
+import BaseInput from "../component/BaseInput";
+import Loader from "../component/Loader";
 //context
 import { ProductContext } from "../context/ProductContextProvider";
 const Product = () => {
@@ -16,13 +18,11 @@ const Product = () => {
   return (
     <div className={styles.main__container}>
       {!products.length ? (
-        <div className={styles.loading}>
-          <img style={{ width: "120%" }} src={loader} alt="" />
-        </div>
+        <Loader classlist={styles.loading} gif={loader} />
       ) : (
         <>
-          <input
-            className={styles.search__input}
+          <BaseInput
+            classlist={styles.search__input}
             type="text"
             name="product"
             placeholder="search product"

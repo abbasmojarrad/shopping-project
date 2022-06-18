@@ -9,7 +9,7 @@ const CartProduct = ({ data: product, dispatch, state }) => {
     <>
       <div className={styles.cart}>
         <div className={styles.image}>
-          <img style={{ width: "200px",height:"250px" }} src={product?.image} alt="" />
+          <img  src={product?.image} alt="" />
         </div>
         <div className={styles.detail}>
           <h3>{product?.title.split(" ")[0] + product?.title.split(" ")[1]}</h3>

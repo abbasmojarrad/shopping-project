@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { CartContext } from "../context/CartContextProvider";
-import { Link } from "react-router-dom";
-
+//component
 import CartProduct from "../component/CartProduct";
+import EmptyCartDetail from "../component/EmptyCartDetail";
 //css
 import styles from "../component/css/cart.module.css";
 const Cart = () => {
@@ -23,12 +23,20 @@ const Cart = () => {
       {state.itemCount > 0 && (
         <div className={styles.payment}>
           <h3 className={styles.number}>number of items: {state.itemCount} </h3>
-          <h3 className={styles.totalprice}>total price: {state.totalPrise} $ </h3>
+          <h3 className={styles.totalprice}>
+            total price: {state.totalPrise} ${" "}
+          </h3>
           <div className={styles.payment__btns}>
-            <button className={styles.clear__btn} onClick={() => dispatch({ type: "CLEAR", payload: null })}>
+            <button
+              className={styles.clear__btn}
+              onClick={() => dispatch({ type: "CLEAR", payload: null })}
+            >
               clear
             </button>
-            <button className={styles.buy__btn} onClick={() => dispatch({ type: "PAYOUT", payload: null })}>
+            <button
+              className={styles.buy__btn}
+              onClick={() => dispatch({ type: "PAYOUT", payload: null })}
+            >
               checkout
             </button>
           </div>
@@ -36,16 +44,16 @@ const Cart = () => {
       )}
 
       {state.itemCount === 0 && !state.checkout && (
-        <div  className={styles.buyitem}>
-          <h3>need item? goto shop</h3>
-          <Link to="/product">shop</Link>
-        </div>
+        <EmptyCartDetail
+          title="need item? goto shop"
+          classlist={styles.buyitem}
+        />
       )}
       {state.itemCount === 0 && state.checkout && (
-        <div  className={styles.checkout}>
-          <h3>thanks for buying !</h3>
-          <Link to="/product">shop</Link>
-        </div>
+        <EmptyCartDetail
+          title="thanks for buying !"
+          classlist={styles.checkout}
+        />
       )}
     </div>
   );

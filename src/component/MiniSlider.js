@@ -88,7 +88,6 @@ function MiniSlider() {
           return (
             <div key={item.id} className={styles.card}>
               <div className={styles.cardtop}>
-                {/* <img src={item.image} alt="item" /> */}
               </div>
               <div className={styles.cardbottom}>
                 <h3 className={styles.cardname}>{item.name}</h3>

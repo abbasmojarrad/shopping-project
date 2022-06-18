@@ -7,12 +7,14 @@
   padding: 2rem;
   min-height: 79vh;
 }
-
+.cart {
+  width: 70%;
+}
 .payment {
-  width: 400px;
+  width: 30%;
   justify-self: flex-start;
   align-self: flex-start;
-  padding: 2rem ;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   margin-top: 15px;
@@ -20,8 +22,9 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   border-radius: 15px;
-  position: sticky;
-  top: 120px;
+  /* position: sticky; */
+  /* top: 120px; */
+  z-index: 99;
 }
 .totalprice {
   margin-top: 0.8rem;
@@ -72,8 +75,29 @@
 .buyitem a,
 .checkout a {
   text-decoration: none;
-  margin-top: .7rem;
-  font-weight:bold;
-  color:rgb(0, 98, 211);  
+  margin-top: 0.7rem;
+  font-weight: bold;
+  color: rgb(0, 98, 211);
   display: block;
+}
+
+@media only screen and (max-width: 860px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .payment {
+    width: 100%;
+    position: block;
+  }
+  .cart {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .buy__btn {
+
+    padding: 10px 17px;
+
+  }
 }

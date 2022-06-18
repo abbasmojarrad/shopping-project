@@ -3,13 +3,11 @@ import { Link, useHistory } from "react-router-dom";
 //context
 import { ProductContext } from "../context/ProductContextProvider";
 import { CartContext } from "../context/CartContextProvider";
-//helper function
-import { hasProduct, ProductNumber } from "../helper/functions";
 //css
 import styles from "./css/productdetails.module.css";
-import { HiTrash } from "react-icons/hi";
 //component
 import loader from "../assets/loader.gif";
+import ActionButtons from "./ActionButtons";
 
 const ProductDetails = (props) => {
   const products = useContext(ProductContext);
@@ -24,7 +22,9 @@ const ProductDetails = (props) => {
   });
   return (
     <>
-      <Link className={styles.back} to="/product">back to shop</Link>
+      <Link className={styles.back} to="/product">
+        back to shop
+      </Link>
       <div className={styles.container}>
         {!products.length ? (
           <div>
@@ -41,49 +41,13 @@ const ProductDetails = (props) => {
               <p className={styles.description}>{product?.description}</p>
               <p className={styles.price}>{product?.price}$</p>
               <div className={styles.buttons}>
-                <div >
-                  {hasProduct(state.cartList, product?.id) ? (
-                    <button
-                      className={styles.increase__button}
-                      onClick={() =>
-                        dispatch({ type: "INCREASE", payload: product })
-                      }
-                    >
-                      +
-                    </button>
-                  ) : (
-                    <button
-                      className={styles.add__button}
-                      onClick={() =>
-                        dispatch({ type: "ADD", payload: product })
-                      }
-                    >
-                      Add to Cart
-                    </button>
-                  )}
-                  <span className={styles.product__number}>
-                    {ProductNumber(state.cartList, product?.id)}
-                  </span>
-                  {ProductNumber(state.cartList, product?.id) === 1 && (
-                    <button
-                      className={styles.remove}
-                      onClick={() =>
-                        dispatch({ type: "REMOVE", payload: product })
-                      }
-                    >
-                      <HiTrash />
-                    </button>
-                  )}
-                  {ProductNumber(state.cartList, product?.id) > 1 && (
-                    <button
-                      className={styles.decrease__button}
-                      onClick={() =>
-                        dispatch({ type: "DECREASE", payload: product })
-                      }
-                    >
-                      -
-                    </button>
-                  )}
+                <div>
+                  <ActionButtons
+                    classlist={styles}
+                    dispatch={dispatch}
+                    product={product}
+                    state={state}
+                  />
                 </div>
               </div>
             </div>
